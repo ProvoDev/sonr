@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+         <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Righteous" rel="stylesheet">
+
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="index.html">SONR<i class="fab fa-servicestack"></i></a>                   
+                  </nav>
+                  <ul class="nav nav-pills nav-bottom nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="profile.html"><i class="fas fa-user fa-lg"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fas fa-home fa-lg"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="requests.html"><i class="fas fa-envelope fa-lg"></i></a>
+                        </li>
+                    </ul>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="offset-lg-4 col-lg-4 col-md-6 offset-md-3 col-xs-12">
+                        <div class="row">
+                                <div class="col">
+                                    <h1>Change your profile</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr />
+                                    <h3>Choose your activities</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <ul id="activity_list" class="list-group list-activities">
+                                        
+                                    </ul>
+                                </div>
+                
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr />
+                                    <form>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Opt in?</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col">
+                                    <div class="profile-btn btn btn-success">Save</div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="ts/profile.js"></script>
+        <script>
+            $('.list-group-item').click(function() { 
+                this.classList.toggle('active'); 
+            });
+        </script>
+    </body>
+</html>
