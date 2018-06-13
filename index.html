@@ -12,9 +12,10 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand center" href="index.html">SONR<i class="fab fa-servicestack"></i></a>
-        </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand center" href="index.html">SONR<i class="fab fa-servicestack"></i></a>
+                    
+                  </nav>
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
@@ -47,10 +48,36 @@
         <script>
             
             var people = ["Brandon", "Jorge", "Drake", "John","Brandon", "Jorge", "Drake", "John"];
+            
+            people.forEach(person => 
+            {
+                var personAttribute = document.createElement("a");
+                personAttribute.setAttribute("href", "actions.html");
+                personAttribute.className += "people-item list-group-item d-flex justify-content-between align-items-center";
+                
+                var personPhoto = document.createElement("img");
+                personPhoto.src = "https://loremflickr.com/75/75";
+                personPhoto.className += "img-fluid img-person";
 
-            for(var i in people) {
-                console.log(people[i]);
-                $('#people').append('<a href="actions.html" class="people-item list-group-item d-flex justify-content-between align-items-center"><img class="img-fluid img-person" src="https://loremflickr.com/75/75"> '+people[i]+' || Hello<span class="badge badge-pill"><i class="fas fa-chevron-right fa-lg"></i></span></a>');}
+                var innerText = document.createTextNode(person);
+
+                var personBadge = document.createElement("span");
+                personBadge.className += "badge badge-pill";
+
+                var iconTag = document.createElement("i");
+                iconTag.className += ("fas fa-chevron-right fa-lg");
+
+                personAttribute.appendChild(personPhoto);
+                personAttribute.appendChild(innerText);
+                personBadge.appendChild(iconTag);
+                personAttribute.appendChild(personBadge);
+
+                document.getElementById("people").append(personAttribute);
+
+                console.log(person);
+
+                //$('#people').append('<a href="actions.html" class="people-item list-group-item d-flex justify-content-between align-items-center"><img class="img-fluid img-person" src="https://loremflickr.com/75/75"> ' + people[i] + ' <span class="badge badge-pill"><i class="fas fa-chevron-right fa-lg"></i></span></a>');
+            })
         </script>
     </body>
 </html>
